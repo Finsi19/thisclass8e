@@ -87,7 +87,7 @@ section{
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/images/home8e.jpeg') no-repeat;
+    background: url('home8e.jpeg') no-repeat;
     background-size: cover;
     background-position: center;
 }
