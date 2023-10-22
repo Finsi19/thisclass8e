@@ -531,8 +531,17 @@ span{
     justify-content: space-between;
 }
 
-.skills-content h3 a{
-    text-decoration: none;
+.progress>a>h3{
+    text-decoration: underline;
+    color: white;
+}
+
+.progress>a>h3:link{
+    color: white;
+}
+.progress>a>h3:visited{
+    text-decoration: underline;
+    color: white;
 }
 
 .skills-content .progress h3 span{
@@ -672,16 +681,19 @@ span{
     grid-gap: 40px;
 }
 .card{
-    background-color: #1c1b29;
+    width: 160px;
+    height: 225px;
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, .2);
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0,0,0,0.18);
 }
 .container{
     position: relative;
-    /* /* clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%); */
+    /* clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%); */
 } 
-img{
-    width: 50%;
+.cards>.card>.container>img{
+    width: 100%;
     display: block;
     border-radius: 20px 20px 20px 20px;
 }
@@ -702,7 +714,7 @@ img{
 .details>h3>a{
     color: #ffffff;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 25px;
     align-items: center;
     justify-content: center;
     margin: 10px 0 15px 0;
@@ -710,14 +722,10 @@ img{
     
 }
 
-.details>h3>a:visited{
-    text-decoration: none;
-}
-
 
 .details>p{
     color: #a0a0a0;
-    font-size: 15px;
+    font-size: 30px;
     line-height: 30px;
     font-weight: 400;
 }
@@ -921,6 +929,7 @@ img{
         opacity: .6;
     }
 }
+
 
 @media (max-width: 520px) {
     html {
