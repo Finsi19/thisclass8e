@@ -1,0 +1,455 @@
+ <!-- <div id="php">
+    <?php
+    //Import PHPMailer classes into the global namespace
+    //These must be at the top of your script, not inside a function
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+    
+    //Load Composer's autoloader
+    require 'vendor/autoload.php';
+    
+    //Create an instance; passing `true` enables exceptions
+    $mail = new PHPMailer(true);
+    
+        $nama = $_POST['name'];
+        $email = 'finsi@alfinoraditya.my.id';
+        //$number = $_POST['number'];
+        $mess = $_POST['mess'];
+        $emsub = $_POST['emsub'];
+    
+        
+    try {
+        //Server settings
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->isSMTP();                                            //Send using SMTP
+        $mail->Host       = 'alfinoraditya.my.id';                     //Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->Username   = 'finsi@alfinoraditya.my.id';                     //SMTP username
+        $mail->Password   = 'pinoahay123';                               //SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    
+        //Recipients
+        $mail->setFrom($emsub);
+        $mail->addAddress($email, $nama);     //Add a recipient
+        // $mail->addAddress('ellen@example.com');               //Name is optional
+        $mail->addReplyTo('finsi@alfinoraditya.my.id', 'Tess');
+        // $mail->addCC('cc@example.com');
+        // $mail->addBCC('bcc@example.com');
+    
+        //Attachments
+        // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+        // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+    
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'Report dan Masukan';
+        $mail->Body    = '<h1>Hai!</h1> ada pesan nih dari '.$nama.' ! ';
+        $mail->AltBody = 'Pesan: '.$mess.' ';
+    
+        $mail->send();
+        // echo '<script type="text/javascript"></script>';
+        echo "";
+    
+    } catch (Exception $e) {
+        echo "";
+    }
+    
+    ?>  -->
+    </div> 
+    
+    
+    
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SMPN19 | 8E</title>
+    
+        <link rel="stylesheet" href="css/style.css"> 
+    
+        <!-- box icons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    
+    <body>
+        
+        <!-- header design -->
+        <header class="header">
+            <a href="#" class="logo">8E.</a>
+        
+            <div class="bx bx-menu" id="menu-icon"></div>
+        
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About 8E</a>
+                <a href="#education">Structure</a>
+                <a href="#skills">Member</a>
+                <a href="#con">Contact</a>
+    
+                <span class="active-nav"></span>
+   
+            </nav>
+         </header>
+        <!-- home section design -->
+         <section class="home show-animate" id="home">
+            <div class="home-content">
+                <div class="typing-container">
+                    <h1>Hi, <span>Visitor!</span></h1>
+                </div>
+                    <div class="text-animate">
+                    <h3>WELCOME</h3>
+                   
+                </div>
+                <p>8E Class</p>
+                    
+                </div>
+         </section>
+        <!-- about section design -->
+        <section class="about" id="about">
+            <h2 class="heading">About <span>8E</span><span class="animate scroll" style="--i:1;"></span></h2>
+            
+            
+            
+            <div class="about-img">
+                <img src="/images/8e.gif" alt="About" id="about">
+                <!-- <span class="circle-spin"></span> -->
+            </div>
+            
+            <div class="about-content">
+                <h3>My Class 8E</h3>
+                <p>haii..kenalin kami dari kelas 8E, kelas kami bisa dibilang berisik kadang juga tertib sie, 
+                    akan tetapi berisik itulah yang membuat kami sefrekuensi,tapii murid disini juga banyak yg pinter dan kreatif, 
+                    anjayyy walaupun sisi lainn susah di aturr dan susah 
+                    bangett di bilangin (di atur) tapi kelas ini solidaritas tanpaa batass bangett, mungkinnn segitu aja?
+                </p>
+                     
+                     <!-- <div class="btn-box btns">
+                        <a href="" class="btn">Read More</a>
+                     </div> -->
+    
+            </div>
+        </section>
+        <!-- education section design -->
+        <section class="education" id="education">
+            <h2 class="heading">8E <span>Structure</span></h2>
+    
+            <div class="education-row">
+                <div class="education-column">
+                    <h3 class="title">Structure</h3>
+                    <div class="education-box">
+    
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Wali Kelas</h3>
+                                <p>Wiwin Kurniawati</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Ketua Kelas</h3>
+                                <p>Maliq Adillah P</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Wakil Ketua Kelas</h3>
+                                <p>Cecilia Amand I.P</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Sekretaris 1</h3>
+                                <p>Fairuz Arfah R</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Sekretaris 2</h3>
+                                <p>Sabrina Nuraeni</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Bendahara 1</h3>
+                                <p>Refy Habibul N.W</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Bendahara 2</h3>
+                                <p>Bendahara 2</p>
+                            </div>
+                        </div>
+    
+                       
+    
+                <div class="education-column">
+                    <h3 class="title">Schedule</h3>
+    
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Senin</h3>
+                                <p>
+                                    • Bahasa Indonesia
+                                    <br>
+                                    • BK
+                                    <br>
+                                    • IPA
+                                    <br>
+                                    • Matematika
+                                </p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Selasa</h3>
+                                <p>
+                                    • PJOK
+                                    <br>
+                                    • IPA
+                                    <br>
+                                    • Seni Budaya
+                                    <br>
+                                    • Matematika
+                                </p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Rabu</h3>
+                                <p>
+                                    • P5
+                                </p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Kamis</h3>
+                                <p>
+                                    • PPKN
+                                    <br>
+                                    • IPS
+                                    <br>
+                                    • Bahasa Inggris
+                                </p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <h3>Jumat</h3>
+                                <p>
+                                    • Informatika
+                                    <br>
+                                    • PAI
+                                    <br>
+                                    • Bahasa Indonesia
+                                    <br>
+                                    • Bahasa Sunda
+                                </p>
+                            </div>
+                        </div>
+    
+                        
+                        
+                    </div>
+                 </div>
+    
+            </div>
+        </section>
+        <!-- skills section design -->
+        <section class="skills" id="skills">
+            <h2 class="heading">8E <span>Member</h2>
+    
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h3 class="title">Laki-Laki</h3>
+    
+                    <div class="skills-box">
+
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>• Abrisam <span></span></h3>
+                                <h3>• Ahmad Fahzira <span></span></h3>
+                                <h3>• Alif <span></span></h3>
+                                <h3>• Dzaky <span></span></h3>
+                                <h3>• Fadillah R <span></span></h3>
+                                <h3>• Fadillah P <span></span></h3>
+                                <h3>• Fathir <span></span></h3>
+                                <h3>• Handira Rama <span></span></h3>
+                                <h3>• Lionel <span></span></h3>
+                                <h3>• Maliq <span></span></h3>
+                                <h3>• M.Arman <span></span></h3>
+                                <h3>• M.Haikal <span></span></h3>
+                                <h3>• M.Yudho <span></span></h3>
+                                <h3>• Raffa S <span></span></h3>
+                                <h3>• Rezky <span></span></h3>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+    
+                <div class="skills-column">
+                    <h3 class="title">Perempuan</h3>
+    
+                    <div class="skills-box">
+                        <div class="skills-content">
+
+                            <div class="progress">
+                                <h3>• Adelia <span></span></h3>
+                                <h3>• Ayu <span></span></h3>
+                                <h3>• Cecilia<span></span></h3>
+                                <h3>• Chikal<span></span></h3>
+                                <h3>• Diana<span></span></h3>
+                                <h3>• Fairuz<span></span></h3>
+                                <h3>• Humaira<span></span></h3>
+                                <h3>• Karunia<span></span></h3>
+                                <h3>• Lissa<span></span></h3>
+                                <h3>• Mita<span></span></h3>
+                                <h3>• Naysila<span></span></h3>
+                                <h3>• Novita<span></span></h3>
+                                <h3>• Refy<span></span></h3>
+                                <h3>• Revana<span></span></h3>
+                                <h3>• Sabrina<span></span></h3>
+                                <h3>• Sarah<span></span></h3>
+                                <h3>• Shilla<span></span></h3>
+                                <h3>• Siti<span></span></h3>
+                                <h3>• Taskira<span></span></h3>
+                                <h3>• Zahra<span></span></h3>
+                                <!-- <div class="bar"><span></span></div> -->
+                            </div>
+    
+    
+                            <!-- <div class="progress">
+                                <h3>Graphic Design <span>40%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div> -->
+                        </div>
+                        
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <!-- contact section design smntra nonaktif -->
+        
+    <section class="con" id="con">
+         <center>
+        <h1>Social Media</h1>
+        
+           
+            <!-- <a href="https://www.instagram.com/8e.nineteen?igshid=MzRlODBiNWFlZA%3D%3D"><i class='bx bxl-instagram'></i></a> 
+            <span class="animate" style="--i:5;"></span> --> 
+            <!-- <a href="https://open.spotify.com/playlist/7m7aEOqI49FTCauIi9Aoy6?si=151458cb7bd04834"><i class='bx bxl-spotify'></i></a>
+            </center> 
+<!--  -->
+            
+</center>
+     </section>
+
+    <div class="cards" id="con">
+        <div class="card card1">
+            <div class="container">
+                <img src="images/ig.png" alt="las vegas">
+            </div>
+            <div class="details">
+                <h3>
+                    <a href="https://www.instagram.com/8e.nineteen?igshid=MzRlODBiNWFlZA%3D%3D">IG</a>
+                </h3>
+               
+            </div>
+        </div>
+        <div class="card card2">
+            <div class="container">
+                <img src="images/spot.png" alt="New York">
+            </div>
+            <div class="details">
+                <h3>
+                    <a href="https://open.spotify.com/playlist/7m7aEOqI49FTCauIi9Aoy6?si=e4846f522fe149cd">Spotify</a>
+                </h3>
+               
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="container">
+                <img src="images/ng.png " alt="Singapore">
+            </div>
+            <div class="details">
+                <h3>
+                    <a href="https://ngl.link/lapanee1">NGL</a>
+                </h3>
+                
+            </div>
+        </div>
+    </div>  
+
+    <!-- <center> -->
+       <!-- <h2 class="heading">OR</h2>
+        </center>
+        <section class="contact" id="contact"> 
+          
+          <form action="#php" method="post">
+             <div class="input-box">
+                 <div class="input-field">
+                     <input type="text" name="name" placeholder="Name" required>
+                     <span class="focus"></span>
+                </div>
+    
+                <div class="input-field">
+                    <input type="email" name="emsub" placeholder="Your Email" required>
+               <span class="focus"></span>
+                </div>
+                </div> -->
+                <!-- <div class="input-box">
+                      <div class="input-field">             
+                      <input type="text" placeholder="Phone Number" required>
+                       <span class="focus"></span>
+                    </div>
+        
+                      <div class="input-field">
+                            <input type="email" placeholder="Email Subject" required>
+                          <span class="focus"></span>
+                      </div>
+              </div-->
+    
+                <!-- <div class="textarea-field">
+                   <textarea name="mess" id="" cols="30" rows="10" placeholder="Your Messege" required></textarea>
+    <span class="focus"></span> 
+             </div>
+             <div class="btn-box btns">
+             <button type="submit" class="btn" id="btn">Submit</button>
+             <div id="notification"></div>
+            </div>
+              <!-- <div class="btn-box btns">-->
+              <!--   <button type="submit" name="button" class="btn" id="btn">Submit</button>-->
+              <!--   <div id="notification"></div>-->
+              <!--</div>-->
+            <!-- </form>
+     </section>  --> 
+        <!-- footer design -->
+    
+            <footer class="footer">
+                <div class="footer-text">
+                    <p>Copyright &copy; 2023 by Alfino Raditya | All Rights Reserved.
+                        <!-- <span class="animate scroll" style="--i:1;"></span> -->
+                    </p>
+                </div>
+    
+                <div class="footer-iconTop">
+                    <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+                    <!-- <span class="animate scroll" style="--i:3;"></span> -->
+                </div>
+            </footer>
+        <script src="js/script.js"></script>
+    </body>
+    
+    </html>
