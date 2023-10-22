@@ -47,23 +47,4 @@ window.onscroll = () => {
     );
 }
 
-// animasi text
-
-
-// ubah gambar about
-
-// var about = document.getElementById("about");
-// var about1 = "/images/about.jpg"; // Gambar awal
-// var about2 = "/images/about2.jpg"; // Gambar yang akan diganti saat diklik
-// var isAbout = true;
-
-// about.addEventListener("click", function() {
-//   if (isAbout) {
-//     about.src = about2;
-//     isAbout = false;
-//   } else {
-//     about.src = about1;
-//     isAbout = true;
-//   }
-// });
 
