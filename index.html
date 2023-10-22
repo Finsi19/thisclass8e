@@ -1,68 +1,4 @@
- <!-- <div id="php">
-    <?php
-    //Import PHPMailer classes into the global namespace
-    //These must be at the top of your script, not inside a function
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
-    
-    //Load Composer's autoloader
-    require 'vendor/autoload.php';
-    
-    //Create an instance; passing `true` enables exceptions
-    $mail = new PHPMailer(true);
-    
-        $nama = $_POST['name'];
-        $email = 'finsi@alfinoraditya.my.id';
-        //$number = $_POST['number'];
-        $mess = $_POST['mess'];
-        $emsub = $_POST['emsub'];
-    
-        
-    try {
-        //Server settings
-        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'alfinoraditya.my.id';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'finsi@alfinoraditya.my.id';                     //SMTP username
-        $mail->Password   = 'pinoahay123';                               //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-    
-        //Recipients
-        $mail->setFrom($emsub);
-        $mail->addAddress($email, $nama);     //Add a recipient
-        // $mail->addAddress('ellen@example.com');               //Name is optional
-        $mail->addReplyTo('finsi@alfinoraditya.my.id', 'Tess');
-        // $mail->addCC('cc@example.com');
-        // $mail->addBCC('bcc@example.com');
-    
-        //Attachments
-        // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-        // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-    
-        //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Report dan Masukan';
-        $mail->Body    = '<h1>Hai!</h1> ada pesan nih dari '.$nama.' ! ';
-        $mail->AltBody = 'Pesan: '.$mess.' ';
-    
-        $mail->send();
-        // echo '<script type="text/javascript"></script>';
-        echo "";
-    
-    } catch (Exception $e) {
-        echo "";
-    }
-    
-    ?>  -->
-    </div> 
-    
-    
-    
-    
-    <!DOCTYPE html>
+
     <html lang="en">
     
     <head>
@@ -71,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SMPN19 | 8E</title>
     
-        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="style.css"> 
     
         <!-- box icons -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -117,7 +53,7 @@
             
             
             <div class="about-img">
-                <img src="/images/8e.gif" alt="About" id="about">
+                <img src="8e.gif" alt="About" id="about">
                 <!-- <span class="circle-spin"></span> -->
             </div>
             
@@ -345,21 +281,13 @@
     <section class="con" id="con">
          <center>
         <h1>Social Media</h1>
-        
-           
-            <!-- <a href="https://www.instagram.com/8e.nineteen?igshid=MzRlODBiNWFlZA%3D%3D"><i class='bx bxl-instagram'></i></a> 
-            <span class="animate" style="--i:5;"></span> --> 
-            <!-- <a href="https://open.spotify.com/playlist/7m7aEOqI49FTCauIi9Aoy6?si=151458cb7bd04834"><i class='bx bxl-spotify'></i></a>
-            </center> 
-<!--  -->
-            
 </center>
      </section>
 
     <div class="cards" id="con">
         <div class="card card1">
             <div class="container">
-                <img src="images/ig.png" alt="las vegas">
+                <img src="ig.png" alt="las vegas">
             </div>
             <div class="details">
                 <h3>
@@ -370,7 +298,7 @@
         </div>
         <div class="card card2">
             <div class="container">
-                <img src="images/spot.png" alt="New York">
+                <img src="spot.png" alt="New York">
             </div>
             <div class="details">
                 <h3>
@@ -381,7 +309,7 @@
         </div>
         <div class="card card3">
             <div class="container">
-                <img src="images/ng.png " alt="Singapore">
+                <img src="ng.png " alt="Singapore">
             </div>
             <div class="details">
                 <h3>
@@ -392,49 +320,7 @@
         </div>
     </div>  
 
-    <!-- <center> -->
-       <!-- <h2 class="heading">OR</h2>
-        </center>
-        <section class="contact" id="contact"> 
-          
-          <form action="#php" method="post">
-             <div class="input-box">
-                 <div class="input-field">
-                     <input type="text" name="name" placeholder="Name" required>
-                     <span class="focus"></span>
-                </div>
-    
-                <div class="input-field">
-                    <input type="email" name="emsub" placeholder="Your Email" required>
-               <span class="focus"></span>
-                </div>
-                </div> -->
-                <!-- <div class="input-box">
-                      <div class="input-field">             
-                      <input type="text" placeholder="Phone Number" required>
-                       <span class="focus"></span>
-                    </div>
-        
-                      <div class="input-field">
-                            <input type="email" placeholder="Email Subject" required>
-                          <span class="focus"></span>
-                      </div>
-              </div-->
-    
-                <!-- <div class="textarea-field">
-                   <textarea name="mess" id="" cols="30" rows="10" placeholder="Your Messege" required></textarea>
-    <span class="focus"></span> 
-             </div>
-             <div class="btn-box btns">
-             <button type="submit" class="btn" id="btn">Submit</button>
-             <div id="notification"></div>
-            </div>
-              <!-- <div class="btn-box btns">-->
-              <!--   <button type="submit" name="button" class="btn" id="btn">Submit</button>-->
-              <!--   <div id="notification"></div>-->
-              <!--</div>-->
-            <!-- </form>
-     </section>  --> 
+   
         <!-- footer design -->
     
             <footer class="footer">
@@ -449,7 +335,7 @@
                     <!-- <span class="animate scroll" style="--i:3;"></span> -->
                 </div>
             </footer>
-        <script src="js/script.js"></script>
+        <script src="script.js"></script>
     </body>
     
     </html>
